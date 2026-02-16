@@ -15,7 +15,19 @@ It includes a Synthetic Data Generator to stress-test the filter against various
 ```
 ├── Filter.py          # LinearKalmanFilter class
 ├── datagen.py         # Trajectory generation, execution, visualization
+├── comp.py            # Comparison between 2 filters
 ```
+## Visualization Examples
+
+| 1D Circle | 2D Spiral |
+|-----------|-----------|
+| ![1D Circle](Pictures/Circle-1D.png) | ![2D Spiral](Pictures/Spiral-2D.png) |
+| Time-series tracking of circular motion | Planar spiral trajectory |
+
+| 3D Figure-8 | Filter Tuning Comparison |
+|-------------|--------------------------|
+| ![3D Figure-8](Pictures/Figure8-3D.png) | ![Tuning Comparison](Pictures/Comparison.png) |
+| Spatial figure-8 trajectory | Smooth/Laggy (High R) & Fast/Nervous (High Q) |
 
 ## Quick Start
 
