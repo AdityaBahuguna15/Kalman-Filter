@@ -95,8 +95,8 @@ estimates = kf.filter(
 - Reduces lag with known accelerations
 - Requires control signal `u`
 
-** Key Note **:
-Using Active control will actually increase RSME due to the physics model being used. WHY? For every loop, the filter predicts the object has moved further ahead due to an acceleration of 1m/s^2 (u = 1). However Measurement (which hasnt accelerated) says the object is behind. This constant tug-pull between false prediction and true measurement causes lag, increasing RSME. FIX: Will need to modify the data generator to use a model using the equation: $p_{new} = p + v \cdot dt + \frac{1}{2} a \cdot dt^2$, simulating acceleration.
+**Key Note**:
+Using Active control will actually increase RMSE due to the physics model being used. WHY? For every loop, the filter predicts the object has moved further ahead due to an acceleration of 1m/s^2 (u = 1). However Measurement (which hasnt accelerated) says the object is behind. This constant tug-pull between false prediction and true measurement causes lag, increasing RMSE. FIX: Will need to modify the data generator to use a model using the equation: $p_{new} = p + v \cdot dt + \frac{1}{2} a \cdot dt^2$, simulating acceleration.
 ```python
 # An example of data with REAL control input
 pos = np.zeros(dim)
